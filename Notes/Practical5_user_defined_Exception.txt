@@ -1,0 +1,43 @@
+PRACTICAL 5
+-----------
+USER DEFINED EXCEPTION
+=======================
+The exceptions that are defined by the user, are known as User Defined 
+Exception.
+In this case the Decalre, Begin and the Exception section are active i.e first
+we decalre the exception, then we define it and at last use it in Exception
+section.
+
+Syntax :
+------
+decalre
+my_exception EXCEPTION;
+Begin
+RAISE my_exception;
+Exception
+when my_exception then
+// STATEMENTS
+End;
+
+Q. WAP to ask for an employee id. When the user enters an invalid id, the 
+   exception should be raised.
+
+A. 
+
+Declare
+e_id emp.empno%type:=-1;
+e_name emp.ename%type;
+invalid_id EXCEPTION;
+Begin
+if e_id <= 0 then
+RAISE invalid_id;
+else
+select ename into e_name from emp where empno=e_id;
+dbms_output.put_line('Name = '||e_name);
+end if;
+Exception
+when invalid_id then
+dbms_output.put_line('ID cannot be less than 0');
+when others then
+dbms_output.put_line('ERROR !');
+End;
