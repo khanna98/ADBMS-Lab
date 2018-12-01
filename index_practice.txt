@@ -1,0 +1,11 @@
+create table people(sno number,name varchar(10),age number);
+insert all into people(sno,name,age) values(1,'Mayank',20)
+into people(sno,name,age) values(2,'Mohita',21)
+into people(sno,name,age) values(3,'Aman',22)
+into people(sno,name,age) values(4,'Arun',23)
+into people(sno,name,age) values(5,'Karan',24)
+into people(sno,name,age) values(6,'Sumant',14)
+select * from dual;
+select * from people;
+select name from people where age<22
+create index index_table on people(age);

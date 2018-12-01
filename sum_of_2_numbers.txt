@@ -1,0 +1,8 @@
+Declare
+a int:= :a;
+b int:= :b;
+c int;
+Begin
+c:= a+b;
+dbms_output.put_line('Sum = ' || c);
+End;

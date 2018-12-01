@@ -1,0 +1,26 @@
+declare
+n number;
+n1 number;
+n2 number;
+begin
+n:=:var;
+n1:=:var1;
+n2:=:var2;
+if(n>n1) then
+if(n>n2) then
+dbms_output.put_line('The greatest is ' ||n);
+end if;
+end if;
+
+if(n1>n) then
+if(n1>n2) then
+dbms_output.put_line('The greatest is ' ||n1);
+end if;
+end if;
+
+if(n2>n) then
+if(n2>n1) then
+dbms_output.put_line('The greatest is ' ||n2);
+end if;
+end if;
+end;

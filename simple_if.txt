@@ -1,0 +1,8 @@
+Declare
+x numbers;
+Begin
+x:==:var;
+if x>5 then
+dbms_output.put_line("The number entered is greater than 5.")
+end if;
+End;

@@ -1,0 +1,14 @@
+declare
+id emp.empno%type:=10;
+name emp.ename%type;
+salary emp.sal%type;
+begin
+select ename,sal into name,salary from emp where empno=id;
+dbms_output.put_line('Name = '||name);
+dbms_output.put_line('Salary = '||salary);
+exception
+when no_data_found then
+dbms_output.put_line('No Such Employee !!');
+when others then
+dbms_output.put_line('ERROR !!');
+end;

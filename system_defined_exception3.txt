@@ -1,0 +1,17 @@
+Declare
+res varchar(1);
+n number:=10;
+Begin
+
+case
+when 1=2 then res:='A';
+when 1<0 then res:='B';
+end case;
+n:=n/0;
+dbms_output.put_line('Value of n = '||n);
+Exception
+when case_not_found then 
+dbms_output.put_line('Case not Found !!');
+when others then
+dbms_output.put_line('ERROR !!');
+End;

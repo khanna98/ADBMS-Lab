@@ -1,0 +1,9 @@
+Declare
+x number;
+Begin
+for k IN Reverse 1..10
+loop
+dbms_output.put_line('Value of k = ' || k);
+end loop;
+dbms_output.put_line('Work Done');
+End;

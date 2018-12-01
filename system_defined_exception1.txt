@@ -1,0 +1,11 @@
+Declare
+name varchar(15);
+Begin
+select ename into name from emp where deptno=10;
+dbms_output.put_line('Name = '||name);
+Exception
+when too_many_rows then 
+dbms_output.put_line('Multiple records found !!');
+when others then
+dbms_output.put_line('ERROR !!');
+End;

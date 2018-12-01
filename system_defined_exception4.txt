@@ -1,0 +1,12 @@
+Declare
+n number;
+Begin
+n:=:var;
+n:=n/0;
+dbms_output.put_line('Value of n = '||n);
+Exception
+when zero_divide then
+dbms_output.put_line('Cannot divide by zero');
+when others then
+dbms_output.put_line('ERROR !!');
+End;

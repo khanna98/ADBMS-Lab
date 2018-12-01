@@ -1,0 +1,5 @@
+Declare
+ename varchar2(10):='Mayank';
+Begin
+dbms_output.put_line(ename || ' Khanna');
+End;

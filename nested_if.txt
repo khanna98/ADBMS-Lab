@@ -1,0 +1,13 @@
+Declare
+x int;
+Begin
+x:=:var;
+if x>5 then
+dbms_output.put_line('entered number is greater than 5.');
+else if x<5 then
+dbms_output.put_line('entered number is less than 5.');
+else
+dbms_output.put_line('entered number is equal to 5.');
+end if;
+end if;
+End;

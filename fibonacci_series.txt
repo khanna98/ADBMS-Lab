@@ -1,0 +1,17 @@
+Declare
+first number;
+second number;
+third number;
+Begin
+first:=0;
+second:=1;
+dbms_output.put_line(first ||',' || second);
+third:=first+second;
+while third!=50
+loop
+third:=first+second;
+first:=second;
+second:=third;
+dbms_output.put_line('WOrk);
+end loop;
+End;

@@ -1,0 +1,10 @@
+Declare
+n number;
+Begin
+n:='abc';
+Exception
+when value_error then 
+dbms_output.put_line('Incorrect Value !!');
+when others then
+dbms_output.put_line('ERROR !');
+End;

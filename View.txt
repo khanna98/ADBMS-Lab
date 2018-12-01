@@ -1,0 +1,13 @@
+create table customer(name varchar(10), age number(3));
+insert all into customer(name,age) values('Parul',24)
+into customer(name,age) values('Naina',27)
+select * from dual;
+select * from customer;
+create view cust_view(empName,empAge) as select name,age from customer;
+select * from cust_view;
+create or replace view cust_view(myName,myAge) as select name,age from customer with read only;
+update cust_view set myName = 'Mayank' where myAge=27;
+drop view cust_view;
+
+create table cust_details(id number(3),name varchar(10));
+insert all into 

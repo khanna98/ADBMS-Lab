@@ -1,0 +1,20 @@
+create table demo(abcd number(3), lmno varchar2(10), salary number(4), pqrs number(2));
+desc demo2;
+create table demo2(uvw number(2), high varchar2(10));
+insert all into demo(abcd,lmno,salary,pqrs) values(1,'aman',4000,2)
+into demo(abcd,lmno,salary,pqrs) values(2,'naman',8000,3)
+into demo(abcd,lmno,salary,pqrs) values(3,'ankit',1000,3)
+into demo(abcd,lmno,salary,pqrs) values(4,'raman',2000,2)
+into demo(abcd,lmno,salary,pqrs) values(5,'ram',5000,1)
+into demo(abcd,lmno,salary,pqrs) values(6,'mayank',6000,1)
+select * from dual;
+drop table demo;
+select * from demo;
+insert all into demo2(uvw,high) values(1,'cse')
+into demo2(uvw,high) values(2,'ece')
+into demo2(uvw,high) values(3,'me')
+select * from dual;
+select * from demo2;
+
+create view demo_view(dname,ename,salary) as select high,lmno,salary from demo,demo2;
+select * from demo_view;

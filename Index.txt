@@ -1,0 +1,18 @@
+create table newTable (id number(3), name varchar(20), salary number(10));
+insert into newTable (id, name, salary) values(1,'abc',9000)
+insert all into newTable (id, name, salary) values(2,'def',7000)
+into newTable (id, name, salary) values(3,'ghi',10000)
+into newTable (id, name, salary) values(4,'klm',1200)
+into newTable (id, name, salary) values(5,'nop',3000)
+into newTable (id, name, salary) values(6,'qrs',9000)
+into newTable (id, name, salary) values(7,'tuv',7000)
+into newTable (id, name, salary) values(8,'wxyz',10000)
+select * from dual;
+select * from newTable;
+select name from newTable where salary<=5000
+create index index_newTable on newTable(salary);
+select name from newTable where salary<=5000;
+create index index_func on newTable(salary,(.10*salary));
+select name,.10*salary from newTable;
+select * from user_indexes;
+select * from newTable order by salary,name;  

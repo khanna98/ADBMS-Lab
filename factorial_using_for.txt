@@ -1,0 +1,12 @@
+Declare
+x number;
+n number;
+Begin
+n:=:var;
+x:=1;
+for k IN  1..n
+loop
+x:=x*k;
+end loop;
+dbms_output.put_line('Factorial = ' ||x);
+End;

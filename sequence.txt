@@ -1,0 +1,10 @@
+create sequence sqn
+increment by 2
+start with 6
+maxvalue  20
+minvalue 1
+cycle
+cache 2
+order;
+select sqn.currval from dual;
+select sqn.nextval from dual;
